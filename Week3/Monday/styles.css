@@ -1,0 +1,72 @@
+/* div,p{
+    font-size: 24px;
+    color: orange;
+    background-color: yellow
+} */
+
+div + p{
+    font-size: 24px;
+    color: orange;
+    background-color: yellow
+}
+
+a{
+
+  color: green;
+  font-size: 100px;
+  font-weight: bold;
+  text-decoration: none;  
+}
+
+a:hover{
+    text-decoration: underline;
+    color: purple;
+}
+
+a:visited{
+    text-decoration: underline;
+    color: red;
+}
+
+table{
+    border: green 3px dotted;
+}
+
+td{
+    border: black 1px solid;
+}
+
+th{
+    background-color: yellow;
+}
+
+img{
+    border-radius: 10%;
+}
+
+#myDiv{
+    background-color: pink;
+}
+
+.myClassName{
+    color: red;
+    padding: 10px;
+    margin-left: 100px;
+    background-color: turquoise
+}
+
+.myFont{
+    font-size: 109px;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body{
+    /* background-color: rgb(255,0,255)	
+    ; */
+    margin:0;
+}
+
+.div1{
+    background-color: orchid;
+}
