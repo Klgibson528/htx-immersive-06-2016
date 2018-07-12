@@ -12,8 +12,8 @@
   <body>
       <!--Responsive Grid: col-md, col-xs, col-lg, col-sm col-4-->
       
-        <!-- <div>
-            <div style="border: 1px solid black">
+        <!-- <div class="row">
+            <div class="col-lg-6" style="border: 1px solid black">
                 <ul>
                     <li>6 column on large screen</li>
                     <li>8 column on medium screen</li>
@@ -22,7 +22,7 @@
                 </ul>
             </div>
 
-            <div style="border: 1px solid black">
+            <div class="col-lg-6" style="border: 1px solid black">
                 <ul>
                     <li>6 column on large screen</li>
                     <li>8 column on medium screen</li>
@@ -30,31 +30,33 @@
                     <li>10 column on xlarge screen</li>
                 </ul>
             </div>
+
+            
         </div> -->
 
 
         <!--Equal Width: col-->
       
-        <!-- <div>
-            <div style="border: 1px solid black">
+        <!-- <div class="row">
+            <div class="col" style="border: 1px solid black">
                 <div>
                     Equal Width
                 </div>
             </div>
 
-            <div style="border: 1px solid black">
+            <div class="col" style="border: 1px solid black">
                 <div>
                     Equal Width
                 </div>
             </div>
 
-            <div style="border: 1px solid black">
+            <div class="col" style="border: 1px solid black">
                 <div>
                     Equal Width
                 </div>
             </div>
 
-            <div style="border: 1px solid black">
+            <div class="col" style="border: 1px solid black">
                 <div>
                     Equal Width
                 </div>
@@ -96,98 +98,94 @@
 
         <!--Auto Layout: col-6, col-4, col-->
       
-        <!-- <div>
-            <div style="border: 1px solid black">
+        <!-- <div class="row">
+            <div class="col-6" style="border: 1px solid black">
                 <div>
                     Equal Width
                 </div>
             </div>
 
-            <div style="border: 1px solid black">
+            <div class="col-6" style="border: 1px solid black">
                 <div>
                     Equal Width
                 </div>
             </div>
 
-            <div style="border: 1px solid black">
+            <div class="col" style="border: 1px solid black">
                 <div>
                     Equal Width
                 </div>
             </div>
 
             
-        </div> -->
+        </div>  -->
 
         <!--Equal Width Stacked: col-sm-->
       
-        <!-- <div>
-            <div style="border: 1px solid black">
+         <!-- <div class="row">
+            <div class="col-sm" style="border: 1px solid blue">
                 <div>
                     Equal Width
                 </div>
             </div>
 
-            <div style="border: 1px solid black">
+            <div class="col-sm" style="border: 1px solid yellow">
                 <div>
                     Equal Width
                 </div>
             </div>
 
-            <div style="border: 1px solid black">
+            <div class="col-sm" style="border: 1px solid black">
                 <div>
                     Equal Width
                 </div>
             </div>
 
-            <div style="border: 1px solid black">
+            <div class="col-sm" style="border: 1px solid black">
                 <div>
                     Equal Width
                 </div>
             </div>
-        </div> -->
+        </div>  -->
 
 
         <!--Ordering: col order-3, order-2, order-1-->
       
-        <!-- <div>
-            <div style="border: 1px solid black">
+        <!-- <div class="row">
+            <div class="col-md-4 order-3" style="border: 1px solid black">
                 <div>
                     First
                 </div>
             </div>
 
-            <div style="border: 1px solid black">
+            <div class="col-md-4 order- 1" style="border: 1px solid black">
                 <div>
                     Second
                 </div>
             </div>
 
-            <div style="border: 1px solid black">
+            <div  class="col-md-4 order-2" style="border: 1px solid black">
                 <div>
                     Third
                 </div>
             </div>
 
-            <div style="border: 1px solid black">
-                <div>
-                    Equal Width
-                </div>
-            </div>
-        </div> -->
+            
+        </div>  -->
 
 
         <!--Offset-->
       
-        <!-- <div>
+         <!-- <div class="row">
             
-            <div style="border: 1px solid black">
+            <div class="col-md-6 offset-md-6" style="border: 1px solid black">
                 
                     6 column div offset by 3 [.col-md-6 .offset-md-3]
                 
             </div>
-        </div>
+        </div> -->
 
-        <div class="row">
+         <!-- <div class="row">
         
                 <div class="col-md-4" style="border: 1px solid black">
                     
@@ -202,52 +200,60 @@
                 </div>
             
                 
-            </div>
+            </div> -->
 
-        <div>
-            <div style="border: 1px solid black">
+        <!-- <div class="row">
+            <div class="col-3 offset-3" style="border: 1px solid black">
+                
+                    2 3 column divs, both offset by 3
+                <img src="" class="glyphicon glyphicon-envelope" alt="">
+            </div>
+        
+            <div class="col-3 offset-3"style="border: 1px solid black">
                 
                     2 3 column divs, both offset by 3
                 
             </div>
-        
-            <div style="border: 1px solid black">
-                
-                        2 3 column divs, both offset by 3
-                
-            </div>
-        
             
         </div> -->
+           
             
 
         <!--Nested Column-->
       
-        <!-- <div>
-            <div style="border: 1px solid black">
+         <div class="row">
+            <div class="col-9" style="border: 1px solid black">
                 
-                    Equal Width
+                   <div class="row">
+                       <div class="col-3 bg-danger">
+                           inner column - 6
+                       </div>
+
+                       <div class="col bg-success">
+                           <div class="row">
+                               <div class="col-6">
+                                   col - 6
+                               </div>
+
+                               <div class="col-3">
+                                    col - 3
+                                </div>
+                           </div>
+                       </div>
+                   </div>
                 
             </div>
 
-            <div style="border: 1px solid black">
+            <div class="col" style="border: 1px solid black">
                 
-                    Equal Width
-                
-            </div>
-
-            <div style="border: 1px solid black">
-                
-                    Equal Width
+                   lzdkjfz
                 
             </div>
 
-            <div style="border: 1px solid black">
-                
-                    Equal Width
-                
-            </div>
-        </div> -->
+            
+
+            
+        </div> 
 
         
         
