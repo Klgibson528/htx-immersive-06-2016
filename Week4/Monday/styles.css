@@ -55,3 +55,12 @@
     font-size: 10px;
     color: gray;
 }
+
+.dimmer1{
+    opacity: 1;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    /* position: absolute;
+    top: 0; */
+}
