@@ -13,8 +13,11 @@ function buildPage(){
 
     var header = document.createElement("div");
 
-    header.style.backgroundColor = "green";
+    // header.style.backgroundColor = "green";
     header.style.height="300px";
+    header.setAttribute("class", "myStyle")
+
+
 
     document.body.appendChild(header);
 
