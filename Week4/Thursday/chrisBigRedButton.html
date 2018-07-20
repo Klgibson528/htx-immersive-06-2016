@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    #big-red-button{
+        background-color: red;
+        width: 200px;
+        height: 200px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+    }
+
+    #count{
+        font-size: 28px;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+    
+    <div id="big-red-button">
+        <div>
+        big red button
+        </div>
+
+        <div id="count"></div>
+    </div>
+
+    <script>
+
+        let clickCount = 0;
+        var bigRedButton = document.querySelector('#big-red-button');
+
+        var handleClick = function(){
+            clickCount = clickCount + 1;
+            console.log(`you have clicked ${clickCount} times`);
+            let countLabel = document.querySelector('#count');
+            countLabel.textContent = clickCount;
+
+        }
+
+        
+        bigRedButton.addEventListener('click', handleClick);
+
+        //alternatively, you could write the event listener like so:
+
+        // bigRedButton.addEventListener('click', function(){
+        //     clickCount = clickCount + 1;
+        //     console.log(`you have clicked ${clickCount} times`);
+        //     let countLabel = document.querySelector('#count');
+        //     countLabel.textContent = clickCount;
+        // })
+
+    </script>
+</body>
+</html>
