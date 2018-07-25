@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <!-- <p id="demo"></p>
+
+
+        <script>
+            try {
+                adddlert("Welcome guest!");
+            }
+            catch(err) {
+                document.getElementById("demo").innerHTML = err.name + " " + err.message;
+            }
+        </script> -->
+
+        <div id="demo"></div>
+        <script>
+        // var num = 1;
+        //     try {
+        //         num.toPrecision(500);   // A number cannot have 500 significant digits
+        //     }
+        //     catch(err) {
+        //         document.getElementById("demo").innerHTML = err.name + err.message;
+        //     }
+        // </script>
+
+
+            <script>
+            try {
+                eval("alert('Hello)");   // Missing ' will produce an error
+                }
+                catch(err) {
+                document.getElementById("demo").innerHTML = err.name;
+                }
+            </script>
+</body>
+</html>
