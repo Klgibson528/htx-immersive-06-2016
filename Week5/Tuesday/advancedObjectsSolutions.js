@@ -46,16 +46,28 @@ function Hand() {
 
 Hand.prototype.addCard = function(card) {
     this.cardsInHand.push(card);
+    // console.log("current cards",this.cardInHand);
 }
 
 Hand.prototype.getPoints = function() {
     var self = this;
+
     var points = self.cardsInHand.map(function(e) {
         return e.point;
     });
-    points.reduce(function(a, b) {
-        return a + b;
-    }, 0);
+
+    // points.reduce(function(a, b) {
+    //     return a + b;
+    // }, 0);
+
+    // console.log(points);
+    let count = 0;
+    points.forEach(function(index){
+        count = count + index;
+    })
+
+    // console.log(count);
+    return count;
 }
 
 // Deck Constructor
@@ -83,3 +95,12 @@ Deck.prototype.shuffle = function() {
 Deck.prototype.numCardsLeft = function() {
     return this.deck.length;
 }
+
+
+var myHand = new Hand();
+myHand.addCard(new Card(13, "hearts"));
+myHand.addCard(new Card(11, "Diamonds"));
+myHand.addCard(new Card(9, "Diamonds"));
+
+console.log(myHand.getPoints());
+
