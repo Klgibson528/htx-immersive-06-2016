@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    .myDiv{
+        background-color: green;
+        height: 200px;
+    }
+
+    .myYellowDiv{
+        background-color: yellow;
+        height: 200px;
+    }
+
+    .nav-container{
+        
+        height: 200px;
+        background-color: pink;
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="nav-container">
+            <a  class="linkClass" data-image="target" href="#">my Link</a>
+            <a  class="linkClass" href="#">my Link</a>
+            <a  class="linkClass" href="#">my Link</a>
+            <a  class="linkClass" href="#">my Link</a>
+            <a  class="linkClass" href="#">my Link</a>
+
+    </div>
+    
+    <a  id="myLink" href="#">my Link</a>
+
+    <a  class="linkClass" data-image="target" href="#">my Link</a>
+    <a  class="linkClass" href="#">my Link</a>
+    <a  class="linkClass" href="#">my Link</a>
+    <a  class="linkClass" href="#">my Link</a>
+    <a  class="linkClass" href="#">my Link</a>
+
+    <button>click here</button>
+    <textarea name="" id="" cols="30" rows="10">hello world</textarea>
+    <script>
+    let myButton1 = document.querySelectorAll('button');
+        myButton1.
+    </script>
+    <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+
+
+    <script>
+    
+    $(document).ready(function () {
+
+        
+        
+        //code block
+
+        // let myLink = $('#myLink');
+
+        // console.log(myLink);
+
+        // let $myLink = $('[data-image="target"]');
+
+        // console.log($myLink);
+
+        // let $anchor = $('<a>');
+
+            $myLink = $('#myLink');
+
+        var $anchor = $('<a>', {
+            'class': 'nav-item',
+            'data-image': 'trigger',
+            'text': 'Click me!',
+            'href': "#"
+            });
+
+        ($myLink).before($anchor);
+
+        $body = $('body');
+
+        var $myDiv = $('<div>');
+
+        $myDiv.addClass('myYellowDiv')
+
+        $myDiv.append($anchor);
+
+        ($myLink).after($myDiv);
+
+        
+
+
+        // $myButton = ('<button>', {
+        //     'id': 'myButton',
+        //     'text': 'sample button'
+        // });
+
+        //$myDiv.append($myButton);
+
+        // $('#myButton').click(() =>{
+        //     alert('my click event');
+        // })
+
+        $myDiv.on('click', (e)=>{
+            console.log(e);
+
+            alert('refresh page is you want to see the yellow box');
+
+            $myDiv.slideUp();
+
+            
+        })
+
+        var $thumbnailContainer = $('.nav-container')
+
+        $thumbnailContainer.on('click', 'img', function (event) {
+        // do stuff!
+            event.preventDefault;
+            alert('link clink')
+        })
+
+
+        // let myDiv = document.querySelectorAll('.nav-container');
+
+
+        // myDiv[0].addEventListener('click', (e)=>{
+
+        //     if(e.target.targetName  == "IMG"){
+        //         alert('link clink');
+        //     }
+
+        // })
+
+
+            $('textarea').keydown(function (event) {
+                console.log('Key Down:', event.key);
+                });
+
+            $('textarea').keyup(function (event) {
+            console.log('Key Up:', event.keyCode);
+            });
+
+        $myButton = $('button');
+
+        $myButton.on('click',  function (event) {
+        // do stuff!
+        $myDiv.slideToggle(3000) ;
+            $('textarea').fadeOut(5000);
+        })
+
+
+    });
+
+
+    
+    </script>
+</body>
+</html>
