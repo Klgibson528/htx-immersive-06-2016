@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+        <!-- <form id="myForm">
+        Enter name: 
+        volvo<input name="brand" type="radio" value="volvo">
+        saab <input name="brand" type="radio" value="saab">
+        bmw<input name="brand" type="radio" value="bmw">
+        
+        <button type="submit">sumbit</button>
+        </form> -->
+
+        <form id="myForm">
+                Enter brand: 
+                test<input id="hi" name="brand" type="radio" value="volvo">
+                <input name="brand" type="radio" value="saab">
+                <input name="brand" type="radio" value="bmw">
+
+                <button type="submit">sumbit</button>
+            </form>
+
+
+        <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+    <script>
+        $('#myForm').submit(function(e){
+            e.preventDefault();
+
+            if($('#hi').is(':checked') == true){
+                console.log("hello");
+            }
+            else{
+                console.log("world")
+            } //either true or false
+        })
+        </script>
+
+        <!-- <script>
+
+            $('#myForm').submit(function(e){
+                e.preventDefault();
+                console.log($('input:checked').val())
+                // $('input:checked').val();//either volvo, saab, or bmw
+            })
+        </script> -->
+
+        <!-- <form onsubmit="myFunction()" action="me@me.com">
+                <label for="choose">Do you prefer css or html?</label>
+                <input id="choose" name="i_like" required pattern="css| html">
+                <button type="submit">Submit</button>
+              </form> -->
+
+        <!-- <form>
+                <div>
+                  <label for="choose">Would you prefer a banana or a cherry?</label>
+                  <input id="choose" name="i_like" required minlength="6" maxlength="6">
+                </div>
+                <div>
+                  <label for="number">How many would you like?</label>
+                  <input type="number" id="number" name="amount" value="1" min="1" max="10">
+                </div>
+                <div>
+                  <button>Submit</button>
+                </div>
+              </form> -->
+
+        <!-- <form method="get">
+                <label for="choose">Would you prefer a banana or cherry?</label>
+                <input id="choose" name="i_like" required>
+                <button>Submit</button>
+        </form> -->
+
+    <!-- <form action="/action_page.js">
+        <fieldset>
+            <legend>Personal information:</legend>
+            First name:<br>
+            <input type="text" name="firstname" value="Mickey"><br>
+            Last name:<br>
+            <input type="text" name="lastname" value="Mouse"><br><br>
+            <input type="text" name="lastname" value="Mouse"><br><br>
+            <input type="text" name="lastname" value="Mouse"><br><br>
+            <input type="text" name="lastname" value="Mouse"><br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+        </form> -->
+    
+    <!-- <form method="post" action="/myPage.html">
+
+        <input type="text" name="firstName">
+        <input type="text" name="lastName">
+        <input type="text" name="city">
+
+        <button type="submit">submit</button>
+    </form> -->
+
+    
+</body>
+</html>

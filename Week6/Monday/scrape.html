@@ -16,7 +16,7 @@
         crossorigin="anonymous"></script>
 
 
-    <script>
+    <!-- <script>
 
         $(function () {
 
@@ -63,7 +63,62 @@
 
 
         })
-    </script>
+    </script> -->
+
+
+    <script>
+
+            $(function () {
+    
+                var ypURL = ["https://www.yellowpages.com/search?search_terms=restaurants&geo_location_terms=Houston%2C+TX",
+            "https://www.yellowpages.com/search?search_terms=restaurants&geo_location_terms=Houston%2C%20TX&page=2",
+            "https://www.yellowpages.com/search?search_terms=restaurants&geo_location_terms=Houston%2C%20TX&page=3"
+        ]
+
+
+                
+                
+                var myResults = "";
+
+                ypURL.forEach(function(pageURL){
+
+                $.get(pageURL).done(function (response) {
+                    // console.log(response);
+    
+                    updateUISuccess(response);
+                }).fail(function (error) {
+                    console.log(error);
+    	
+                });
+    
+                // handle XHR success
+                function updateUISuccess(response) {
+                    
+                    
+                    let results = $(response).find('a');
+                    
+                    // console.log(results);
+                    for (r of results){
+
+                        try{
+                            console.log(`${r.innerText}
+                            ${r.href}`);
+                        }catch{}
+                        
+                    }
+                    
+                }
+    
+                // handle XHR error
+                function updateUIError() {
+                    
+                }
+    
+            })//end of foreach
+
+            //console.log(myResults);
+            })
+        </script>
 </body>
 
 </html>
