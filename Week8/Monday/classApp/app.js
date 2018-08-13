@@ -29,7 +29,7 @@ app.use(require('./routes/index'));
 
 
 
-app.get('/books', function(request, response){
+app.use('/books', function(request, response){
     
 
     response.send(`<h1>BookID page </h1>`);
