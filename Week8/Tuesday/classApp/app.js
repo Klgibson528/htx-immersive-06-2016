@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 
 app.get('/test', (req, res) => {
 
-    res.render('test',{
+    res.render('test2',{
         pageTitle: "Test page",
         pageID: 'Test Home',
         speakers: data.speakers

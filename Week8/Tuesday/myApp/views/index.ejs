@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<% include partials/structure/head.ejs %>
+
+<body>
+
+    <% include partials/content/header.ejs %>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                    <% include partials/content/main.ejs %>
+            </div>
+            <!-- primary -->
+            <aside class="col-sm-4">
+                <article class="sidebar">
+                    <h1 class="sidebar-title">Who should come?</h1>
+                    <ul class="sidebar-body">
+                        <li>Anybody interested in art and the creative industry</li>
+                        <li>Painters, sculptors, photographers and graphic artists</li>
+                        <li>Those interested in meeting and making a connection with others in the local art scene.</li>
+                    </ul>
+                </article>
+                <!-- article -->
+
+                <% include partials/content/artwork.ejs %>
+            </aside>
+            <!-- secondary -->
+        </div>
+    </div>
+    <!-- container -->
+    <% include partials/structure/scipts.ejs %>
+    
+</body>
+
+</html>
