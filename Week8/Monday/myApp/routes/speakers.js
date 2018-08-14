@@ -38,7 +38,7 @@ router.get('/speakers/:speakerID', (req, res) => {
     let speaker = dataFile.speakers[req.params.speakerID];
 
     res.send(`
-    
+        <link rel="stylesheet" href="/css/styles.css">
         <h2>${speaker.name}</h2>
         <img src="/images/speakers/${speaker.shortname}_tn.jpg" alt="">
         <p>${speaker.summary}</p>
