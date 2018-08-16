@@ -10,6 +10,7 @@ router.use(bodyParser.urlencoded({ extended: false }));
  
 // parse application/json
 router.use(bodyParser.json());
+
 router.get('/api', (req, res) =>{
     res.json(data);
    
@@ -18,7 +19,7 @@ router.get('/api', (req, res) =>{
 router.post('/api', function(req, res){
     data.unshift(req.body);
 
-    fs.writeFile('../data/feedback.json', JSON.stringify(data), 'utf8',
+    fs.writeFile('data/feedback.json', JSON.stringify(data), 'utf8',
     function(err){
         if(err){
             
@@ -29,7 +30,22 @@ router.post('/api', function(req, res){
     // console.log(req.body.name);
     // console.log(req.body.message);
     res.json(data);
+});
 
+router.delete('/api/:id', function(req, res){
+
+    console.log(req.params.id);
+    data.splice(req.params.id, 1);
+
+    console.log(req.params.id);
+    fs.writeFile('data/feedback.json', JSON.stringify(data), 'utf8',
+  function(err){
+      if(err){
+          console.log(err);
+      }
+  })
+
+  res.json(data);
 })
 
 
