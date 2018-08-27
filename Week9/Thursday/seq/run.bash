@@ -1,0 +1,1 @@
+sequelize model:generate --name schools --attributes school:string,typeOfSchool:string,phone:string

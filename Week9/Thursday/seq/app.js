@@ -7,3 +7,9 @@ db.user.create({nickname: "PDiddy"})
     me = user;
   });
 
+
+db.user.destroy({
+  where: {
+      id: 5 //this will be your id that you want to delete
+  }
+ })
