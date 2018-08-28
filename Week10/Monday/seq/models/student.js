@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     phone: DataTypes.STRING
   }, {});
   student.associate = function(models) {
-    student.hasMany(user);
+    student.hasMany(models.user); 
   };
   return student;
 };

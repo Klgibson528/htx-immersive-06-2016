@@ -42,16 +42,41 @@ let sequelize = require('sequelize');
     
 // })
 
-let myInstance;
-db.user.findById(2)
-.then(function(record){
-    console.log(`${record.firstName} ${record.lastName}
-        email: ${record.email}`);
-    myInstance = record;
+// let myInstance;
+// db.user.findById(2)
+// .then(function(record){
+//     console.log(`${record.firstName} ${record.lastName}
+//         email: ${record.email}`);
+//     myInstance = record;
 
-    myInstance.firstName = "Veronica";
-    myInstance.save().then(() => {console.log('success')});
-});
+//     myInstance.firstName = "Veronica";
+//     myInstance.save().then(() => {console.log('success')});
+// });
+
+
+//adding associations
+// db.student.create({
+//     firstName: 'DigitalCrafts', lastName: 'Houston', email: 'me@me.com'});
+
+// db.user.create({
+//     firstName: 'Veronica', lastName: 'Lino', email: 'me@me.com', studentId: 2});
+
+db.user.findAll({include: [{model: db.student}]})
+.then(function(results){
+
+    console.log(results[5].student.firstName);
+    // results.forEach(function(record){
+    //     console.log(record);
+    //     console.log(record.firstName, record.student.firstName);
+    // })
+})
+
+
+//query with join
+//   db.user.findAll({include: [{model: db.student}]})
+//     .then((results) => {
+//       console.log(results[5].student.firstName);
+//     });
 
 
 
@@ -71,9 +96,9 @@ db.user.findById(2)
 // )
 
 
-// sequelize.query('SELECT * FROM users', { model: user }).then(results => {
+// db.sequelize.query('SELECT * FROM users', { type: sequelize.QueryTypes.SELECT}).then(results => {
     
 //     results.forEach(function(record){
 //         console.log(record.firstName);
 //     })
-//   })
+// });

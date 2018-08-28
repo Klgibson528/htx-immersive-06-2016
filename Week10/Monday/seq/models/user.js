@@ -5,8 +5,11 @@ module.exports = (sequelize, DataTypes) => {
     lastName: DataTypes.STRING,
     email: DataTypes.STRING
   }, {});
+
+  //adds several userId to student table
+
   user.associate = function(models) {
-    user.belongsTo(student);
-  };
+    user.belongsTo(models.student);
+  }; 
   return user;
 };
