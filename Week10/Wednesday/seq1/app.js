@@ -1,6 +1,5 @@
-var express      = require('express');
-
-
+var express = require('express');
+var app = express();
 const LocalStrategy = require('passport-local').Strategy
 
 let passport = require('passport');
@@ -9,9 +8,7 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 const bcrypt = require('bcryptjs');
 const Sequelize = require('sequelize');
-//const SequelizeStore = require('sequelize-session-store')(session);
 let db = require('./models');
-var app = express();
 
 var SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -31,17 +28,6 @@ app.use(session({
 }))
 
 myStore.sync();
-
-// app.use(session({
-//   secret: 'keyboard cat',
-//   resave: true,
-//   store: new SequelizeStore({
-//     db: db.sequelize,
-//     table: 'sessions'
-//   })
-// }));
-
-// myStore.sync();
 
 
 //initialize passport
@@ -191,4 +177,4 @@ passport.deserializeUser((id, done) => {
     
 })
 
-app.listen(3001);
+app.listen(3000);
