@@ -1,6 +1,7 @@
 let db = require('./models');
 let sequelize = require('sequelize');
 
+console.log(db.sequelize.connection);
 
 // db.user.create({firstName: 'Sam', lastName: 'Segal', email: 'me1@me.com'})
 // .then(function(user){
