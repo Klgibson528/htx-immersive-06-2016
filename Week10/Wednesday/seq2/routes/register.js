@@ -7,18 +7,23 @@ router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
 
 router.get('/register', function(req, res) {
- 
-    res.send(
-        ` 
-        <h1>Registration</h1>
 
-        <form action="/register" method="POST">
-          <input type="text" name="username" />
-          <input type="text" name="password" />
-          <input type="submit" />
-        </form>
-        `
-    ); //end of res.send
+
+    res.render('register', {
+        title: "Register"
+    })
+ 
+    // res.send(
+    //     ` 
+    //     <h1>Registration</h1>
+
+    //     <form action="/register" method="POST">
+    //       <input type="text" name="username" />
+    //       <input type="text" name="password" />
+    //       <input type="submit" />
+    //     </form>
+    //     `
+    // ); //end of res.send
     
 });//end of app.get
 
