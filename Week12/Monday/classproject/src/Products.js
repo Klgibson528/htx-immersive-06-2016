@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Name from './Name';
+import Test from './test';
 
 
 class Products extends Component{
@@ -11,20 +12,20 @@ class Products extends Component{
         let products = ['milk', 'cheese', 'oreos', 'eggs', 'shoes'];
 
         let listProducts = products.map(product =>{
-            return <li>{product}</li>;
+            return <li key={product}>{product}</li>;
         })
+
         return(
 
+
            <div>
+               Products App
+               <Test txt="this is some text" cat={1} />
                {this.props.name}
+               {this.props.newName}
                <h1>{message}</h1>
 
-               <Name />
-               <Name />
-               <Name />
-               <Name />
-               <Name />
-
+            
                <ul>
                 {listProducts}
                </ul>
