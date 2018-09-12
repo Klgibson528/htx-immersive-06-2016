@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Products from './Products';
 import Test2 from './Test2';
 import MyState from './MyState';
+import EventHandling from './EventHandling';
 
 class App extends Component {
   render() {
@@ -11,6 +12,8 @@ class App extends Component {
 
     return (
       <div>
+
+        <EventHandling /> 
         {/* {newName}<br />
 
         {this.props.name} {this.props.lastName + 'Veronica'}
@@ -19,7 +22,7 @@ class App extends Component {
 
         {/* <Test2 txt="hello world" cat={1} /> */}
 
-        <MyState />
+        {/* <MyState /> */}
         
       </div>
     );
