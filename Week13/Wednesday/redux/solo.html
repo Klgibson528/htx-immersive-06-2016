@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    hello world
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.0/redux.min.js"></script>
+
+
+    <script>
+    //actions
+    function addPerson(id, name, age){
+
+        return {
+            type: "ADD",
+            personData: {
+                id: id,
+                name: name,
+                age: age
+            }
+        }
+    }
+
+    function removePerson(id){
+        return {
+            type: "REMOVE",
+            personId: id
+        }
+    }
+
+    //reducers
+
+    const initialState = {
+        persons: []
+    }
+
+    function reducer(state, action){
+
+        if(state === undefined){
+            state = initialState;
+        }
+
+        if(action.type === "ADD"){
+
+            const newPerson = {
+                id: action.personData.id,
+                name: action.personData.name,
+                age: action.personData.age
+            }
+            return {
+                ...state,
+                persons: state.persons.concat(newPerson)
+            }
+        }
+        else if (action.type === "REMOVE"){
+            return{
+                ...state,
+                persons: state.persons.filter(person => person.id != action.personId)
+            }
+        }
+    }
+
+    //create store
+
+    var store = Redux.createStore(reducer);
+
+    store.subscribe(showState);
+
+    function showState(){
+        console.log(store.getState());
+    }
+
+    store.dispatch(addPerson(7, "Eric", 21));
+    store.dispatch(addPerson(8, "Matt", 25));
+    store.dispatch(addPerson(6, "Kyle", 21));
+    store.dispatch(addPerson(2, "Nate", 22));
+    store.dispatch(addPerson(3, "Dan", 25));
+    store.dispatch(addPerson(4, "Christian", 22));
+    store.dispatch(addPerson(5, "Erin", 16));
+
+    store.dispatch(removePerson(3))
+
+    
+    </script>
+</body>
+</html>
